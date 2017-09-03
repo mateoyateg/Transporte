@@ -5,6 +5,7 @@
  */
 package transporte;
 import java.util.Scanner;
+import transporte.logica.Ruta;
 /**
  *
  * @author Mateo
@@ -17,27 +18,20 @@ public class Principal {
     
     public static void main(String[] args) {
         Scanner sc = new Scanner (System.in);
+        Ruta r = new Ruta();
         
         
         System.out.println("Calcula tu ruta...");
         System.out.print("Ingrese la cantidad de paradas/trasbordos a realizar: ");
-        int num = sc.nextInt();
-        
-        
-        
+        r.setTrayectos(sc.nextInt());
+                
         System.out.print("Ingrese el tiempo (en minutos): ");
-        int tiempo = sc.nextInt();
+        r.setTiempo(sc.nextInt());
         
         System.out.print("Ingrese el dinero: ");
-        float dinero = sc.nextFloat();
+        r.setDinero(sc.nextInt());
         
-            
-        for (int i = num; i>0; i--){
-            System.out.println("Trayecto" + i);
-            if ()
-        }
-        
-        
+               
     }
     
 }

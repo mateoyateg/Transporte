@@ -9,6 +9,6 @@ package transporte.logica;
  *
  * @author Mateo
  */
-public class Transmilenio {
+public class Transmilenio extends Transporte {
     
 }
