@@ -8,6 +8,7 @@ import java.util.Random;
 import java.util.Scanner;
 import transporte.logica.Distancia;
 import transporte.logica.Ruta;
+import transporte.logica.Usuario;
 /**
  *
  * @author Mateo
@@ -20,60 +21,23 @@ public class Principal {
     
     public static void main(String[] args) {
         //Declarar scanner & objetos de ruta y distancia
-        Scanner sc = new Scanner (System.in);
-        Random rn = new Random ();
-        Ruta r = new Ruta();
-        Distancia d = new Distancia();
+        Usuario u = new Usuario();
         
         //Mensaje de bienvenida
         System.out.println('\t' + "...CALCULA TU RUTA...");
         System.out.println("");
         
-        //Pedir calles y carreras
-        System.out.print("N° de Calle de partida: ");
-        d.setX1(sc.nextInt());
-        System.out.print("N° de Carrera de partida (numero): ");
-        d.setY1(sc.nextInt());
-        System.out.print("N° de Calle de destino: ");
-        d.setX2(sc.nextInt());
-        System.out.print("N° de Carrera de destino: ");
-        d.setY2(sc.nextInt());
-        System.out.println("");
         
-        //Generar numero de transbordos
-        //r.setTrayectos(rn.nextInt(5));
         
-        r.setTrayectos(3);
-                        
-        //Pedir tiempo disponible
-        int tiempo;
-        System.out.print("Ingrese el tiempo (en minutos): ");
-        tiempo = sc.nextInt();
-        
-        while (tiempo < 0){
-            System.out.print("Ingrese un tiempo valido: ");
-            tiempo = sc.nextInt();
-        }
-        
-        r.setTiempo(tiempo);
-        
-        //Pedir dinero disponible
-        int dinero;
-        System.out.print("Ingrese el dinero: ");
-        dinero = sc.nextInt();
-        
-        while (dinero < 0){
-            System.out.print("Ingrese una cantidad de dinero valida: ");
-            dinero = sc.nextInt();
-        }
-        
-        r.setDinero(dinero);
         
         System.out.println("");
         
         //Mostrar puntos y distancias
-        d.mostrarPuntos();
-        d.mostrarDistancia();
+       
+        u.setDistancia();
+        u.setDinero();
+        u.setTiempo();
+        
         
         //Mostrar datos
         System.out.println("");
@@ -84,7 +48,7 @@ public class Principal {
         
         //Mostrar ruta a seguir
         System.out.println("Ruta a seguir:");
-        r.mostrarRuta();
+        u.mostrarRuta();
     }
     
 }

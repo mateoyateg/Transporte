@@ -49,6 +49,7 @@ public class Ruta {
     //Setear & "gettear" datos
     public void mostrarRuta() {
         //Iniciar objetos de cada tipo de transporte
+        int cont = 0;
         Transmilenio transmi = new Transmilenio();
         Metro met = new Metro();
         Caminar cam = new Caminar();
@@ -63,28 +64,39 @@ public class Ruta {
             
             if (tiempo == 0){
                 System.out.println("No existe desplazamiento para 0 minutos");
+                break;
             }
             
             
             
             //[5000,inf)
             if (dinero >= 5000 && tiempo >= 4 ){
-                ube.mostrar();
-                dinero = dinero - 5000;             
+                ube.mostrar();          
                 
                 if (dinero >= 9000){
                     tax.mostrar();
-                    dinero = dinero - 9000;
+                    
+                    cont ++;
+                }
+                
+                
+                if (cont == 0){
+                    dinero = dinero - 5000;
+                }
+                
+                else {
+                   dinero = dinero - 9000; 
                 }
                 
                 tiempo = tiempo - 30;
                 
+                                
                 break;
                 
             }
             
             
-            if (tiempo < 4 && tiempo > 0){
+            if (tiempo < 4 && tiempo > 0 && cont == 0){
                 System.out.println("Usted no dispone de tiempo suficiente");
                 break;
             }
