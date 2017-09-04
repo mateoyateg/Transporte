@@ -10,7 +10,8 @@ package transporte.logica;
  * @author Mateo
  */
 public class Caminar extends Transporte {
-
+    
+    //Mensaje de uso
     @Override
     public void mostrar() {
         System.out.println("- Camine");

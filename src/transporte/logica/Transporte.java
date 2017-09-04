@@ -10,6 +10,8 @@ package transporte.logica;
  * @author Mateo
  */
 public abstract class Transporte {
+    
+    //Atributo que hereda a todos los medios de transporte
     public abstract void mostrar();
     
     

@@ -11,6 +11,7 @@ package transporte.logica;
  */
 public class Metro extends Transporte {
 
+    //Mensaje de uso
     @Override
     public void mostrar() {
         System.out.println("- Use el metro");
