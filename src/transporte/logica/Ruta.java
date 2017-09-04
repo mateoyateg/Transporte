@@ -53,14 +53,48 @@ public class Ruta {
         Metro met = new Metro();
         Caminar cam = new Caminar();
         Bicicleta bic = new Bicicleta ();
+        Uber ube = new Uber ();
+        Taxi tax = new Taxi();
         
         //Ciclo que imprima trayectos
         for (int i = 1; i<= trayectos; i++){
             //Encabezado del trayecto
             System.out.println("Trayecto: " + i);
             
+            if (tiempo == 0){
+                System.out.println("No existe desplazamiento para 0 minutos");
+            }
+            
+            
+            
+            //[5000,inf)
+            if (dinero >= 5000 && tiempo >= 4 ){
+                ube.mostrar();
+                dinero = dinero - 5000;             
+                
+                if (dinero >= 9000){
+                    tax.mostrar();
+                    dinero = dinero - 9000;
+                }
+                
+                tiempo = tiempo - 30;
+                
+                break;
+                
+            }
+            
+            
+            if (tiempo < 4 && tiempo > 0){
+                System.out.println("Usted no dispone de tiempo suficiente");
+                break;
+            }
+                
+            
             //Condiciones determinar el tipo de transporte
-            if (dinero <= 5000 && dinero > 0){
+            
+            //[800,5000)
+            if (dinero < 5000 && dinero >= 800){
+                
                 
                 //Si el tiempo es menor a 30, puede ser metro o transmilenio
                 if (tiempo <= 30){
@@ -96,9 +130,13 @@ public class Ruta {
                     }
                 }
             }
+            
+            if (dinero < 800 && tiempo < 0){
+                cam.mostrar();
+            }
 
             //Si el dinero es menor a cero, debe ser caminata
-            if (dinero <=0 ){
+            if (dinero < 800 && tiempo > 0 ){
                 cam.mostrar();
             }
                 

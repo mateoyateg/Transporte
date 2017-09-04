@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package transporte;
+import java.util.Random;
 import java.util.Scanner;
 import transporte.logica.Distancia;
 import transporte.logica.Ruta;
@@ -20,6 +21,7 @@ public class Principal {
     public static void main(String[] args) {
         //Declarar scanner & objetos de ruta y distancia
         Scanner sc = new Scanner (System.in);
+        Random rn = new Random ();
         Ruta r = new Ruta();
         Distancia d = new Distancia();
         
@@ -38,17 +40,35 @@ public class Principal {
         d.setY2(sc.nextInt());
         System.out.println("");
         
-        //Pedir numero de transbordos
-        System.out.print("Ingrese la cantidad de paradas/transbordos a realizar: ");
-        r.setTrayectos(sc.nextInt());
+        //Generar numero de transbordos
+        //r.setTrayectos(rn.nextInt(5));
+        
+        r.setTrayectos(3);
                         
         //Pedir tiempo disponible
+        int tiempo;
         System.out.print("Ingrese el tiempo (en minutos): ");
-        r.setTiempo(sc.nextInt());
+        tiempo = sc.nextInt();
+        
+        while (tiempo < 0){
+            System.out.print("Ingrese un tiempo valido: ");
+            tiempo = sc.nextInt();
+        }
+        
+        r.setTiempo(tiempo);
         
         //Pedir dinero disponible
+        int dinero;
         System.out.print("Ingrese el dinero: ");
-        r.setDinero(sc.nextInt());
+        dinero = sc.nextInt();
+        
+        while (dinero < 0){
+            System.out.print("Ingrese una cantidad de dinero valida: ");
+            dinero = sc.nextInt();
+        }
+        
+        r.setDinero(dinero);
+        
         System.out.println("");
         
         //Mostrar puntos y distancias
