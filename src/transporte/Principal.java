@@ -21,17 +21,26 @@ public class Principal {
         Ruta r = new Ruta();
         
         
-        System.out.println("Calcula tu ruta...");
+        System.out.println('\t' + "...CALCULA TU RUTA...");
+        System.out.println("");
+        
         System.out.print("Ingrese la cantidad de paradas/trasbordos a realizar: ");
         r.setTrayectos(sc.nextInt());
-                
+                        
         System.out.print("Ingrese el tiempo (en minutos): ");
         r.setTiempo(sc.nextInt());
-        
+                
         System.out.print("Ingrese el dinero: ");
         r.setDinero(sc.nextInt());
+        System.out.println("");
         
-               
+        System.out.println("Nota: Pueden aparecer varios medios de transporte");
+        
+        System.out.println("");
+        
+        System.out.println("Ruta a seguir:");
+        
+        r.mostrarRuta();
     }
     
 }

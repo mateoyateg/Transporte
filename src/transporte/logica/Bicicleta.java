@@ -9,8 +9,11 @@ package transporte.logica;
  *
  * @author Mateo
  */
-public abstract class Transporte {
-    public abstract void mostrar();
-    
+public class Bicicleta extends Transporte {
+
+    @Override
+    public void mostrar() {
+        System.out.println("- Use su bicicleta");
+    }
     
 }

@@ -9,6 +9,11 @@ package transporte.logica;
  *
  * @author Mateo
  */
-public class Metro {
+public class Metro extends Transporte {
+
+    @Override
+    public void mostrar() {
+        System.out.println("- Use el metro");
+    }
     
 }

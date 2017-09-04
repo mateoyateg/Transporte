@@ -42,19 +42,74 @@ public class Ruta {
     public int getTrayectos() {
         return trayectos;
     }
-    
-    
-    
-       
-    
-       
-    public Ruta (){
-        this.transportes = new ArrayList<>();
+          
+    public void mostrarRuta() {
+        
+        Transmilenio transmi = new Transmilenio();
+        Metro met = new Metro();
+        Caminar cam = new Caminar();
+        Bicicleta bic = new Bicicleta ();
+        
+        
+        
+               
+            for (int i = 1; i<= trayectos; i++){
+                System.out.println("Trayecto: " + i);
+                
+                if (dinero <= 5000 && dinero > 0){
+                    
+                    if (tiempo <= 30){
+                                                
+                        if (dinero >= 2200){
+                            transmi.mostrar();
+                            dinero = dinero - 2200;
+                            tiempo = tiempo - 30;
+                        }
+                        
+                                               
+                        if (dinero < 2200){
+                            met.mostrar();
+                            dinero = dinero - 800;
+                            tiempo = tiempo - 30;
+                        }
+                    }
+                    
+                    if (tiempo > 30){
+                        if (tiempo >= 50){
+                            cam.mostrar();    
+                            tiempo = tiempo - 50;
+                            
+                        }
+                        
+                        if (tiempo < 50 && tiempo > 0){
+                            bic.mostrar();
+                            tiempo = tiempo - 30;
+                            
+                        }
+                    }
+                }
+                
+                if (dinero <=0 ){
+                    cam.mostrar();
+                }
+                
+                System.out.println("");
+                
+            }
+            
+            
+    }
+                                    
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
-    /**
-     *
-     * @return
-     */
     
-}
+    
+

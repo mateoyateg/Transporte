@@ -10,5 +10,10 @@ package transporte.logica;
  * @author Mateo
  */
 public class Transmilenio extends Transporte {
+
+    @Override
+    public void mostrar() {
+        System.out.println("- Use Transmilenio");
+    }
     
 }

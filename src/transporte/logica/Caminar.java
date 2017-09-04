@@ -9,6 +9,11 @@ package transporte.logica;
  *
  * @author Mateo
  */
-public class Persona {
+public class Caminar extends Transporte {
+
+    @Override
+    public void mostrar() {
+        System.out.println("- Camine");
+    }
     
 }
