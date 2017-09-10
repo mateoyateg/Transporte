@@ -65,8 +65,10 @@ public class Distancia {
     
     //Mostrar puntos como calles y carreras
     public void mostrarPuntos(){
+        System.out.println("");
         System.out.println("La direccion de partida es: Calle " + x1 + " con Carrera " + y1);
         System.out.println("La direccion de llegada es: Calle " + x2 + " con Carrera " + y2);
+        System.out.println("");
     }
     
     

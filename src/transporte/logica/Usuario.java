@@ -20,10 +20,42 @@ public class Usuario {
     
     private int dinero;
     private int tiempo;
-    private int distancia;
-    
+    private int trayectos;
 
+    public int getTrayectos() {
+        return trayectos;
+    }
+
+    public void setTrayectos(int trayectos) {
+        this.trayectos = trayectos;
+    }
     
+    public int getDinero() {
+        return dinero;
+    }
+
+    public void setDinero(int dinero) {
+        this.dinero = dinero;
+    }
+
+    public int getTiempo() {
+        return tiempo;
+    }
+
+    public void setTiempo(int tiempo) {
+        this.tiempo = tiempo;
+    }
+    
+    public void pasarDatos(){
+        r.setTrayectos(trayectos);
+        r.setDinero(dinero);
+        r.setTiempo(tiempo);
+    }
+    
+    public void bienvenida(){
+        System.out.println('\t' + "...CALCULA TU RUTA...");
+        System.out.println("");
+    }
 
     public void setDistancia() {
         System.out.print("N° de Calle de partida: ");
@@ -36,40 +68,11 @@ public class Usuario {
         d.setY2(sc.nextInt());
         System.out.println("");
     }
-
-    public void setDinero() {
-        System.out.print("Ingrese el dinero: ");
-        this.dinero = sc.nextInt();
-        
-        while (dinero < 0){
-            System.out.print("Ingrese una cantidad de dinero valida: ");
-            this.dinero = sc.nextInt();
-        }
-        
-        r.setDinero(dinero);
-        
-    }
-
-    public void setTiempo() {
-        System.out.print("Ingrese el tiempo (en minutos): ");
-        this.tiempo = sc.nextInt();
-        
-        while (tiempo < 0){
-            System.out.print("Ingrese un tiempo valido: ");
-            this.tiempo = sc.nextInt();
-        }
-        
-        r.setTiempo(tiempo);
-       
-    }
     
-    public void mostrarRuta (){
-        d.mostrarPuntos();
+    public void mostrarResultados (){
         d.mostrarDistancia();
-        r.mostrarRuta();
+        d.mostrarPuntos();
+        r.mostrarRuta();        
     }
-    
-    int aleatorio = rn.nextInt(4) + 1;
-    
-    
+
 }

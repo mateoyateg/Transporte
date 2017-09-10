@@ -46,7 +46,7 @@ public class Ruta {
         return trayectos;
     }
   
-    //Setear & "gettear" datos
+    
     public void mostrarRuta() {
         //Iniciar objetos de cada tipo de transporte
         int cont = 0;
@@ -56,6 +56,10 @@ public class Ruta {
         Bicicleta bic = new Bicicleta ();
         Uber ube = new Uber ();
         Taxi tax = new Taxi();
+        
+        System.out.println("Ruta a seguir:");
+        System.out.println("");
+        System.out.println("Nota: Pueden aparecer varios medios de transporte");
         
         //Ciclo que imprima trayectos
         for (int i = 1; i<= trayectos; i++){

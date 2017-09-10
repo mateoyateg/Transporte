@@ -4,14 +4,13 @@
  * and open the template in the editor.
  */
 package transporte;
+
 import java.util.Random;
 import java.util.Scanner;
-import transporte.logica.Distancia;
-import transporte.logica.Ruta;
 import transporte.logica.Usuario;
 /**
  *
- * @author Mateo
+ * @author Mateo Yate & Juan Ostos
  */
 public class Principal {
 
@@ -21,34 +20,32 @@ public class Principal {
     
     public static void main(String[] args) {
         //Declarar scanner & objetos de ruta y distancia
+        Scanner sc = new Scanner (System.in);
         Usuario u = new Usuario();
+        Random rn = new Random ();
         
         //Mensaje de bienvenida
-        System.out.println('\t' + "...CALCULA TU RUTA...");
-        System.out.println("");
+        u.bienvenida();
         
-        
-        
-        
-        System.out.println("");
-        
-        //Mostrar puntos y distancias
-       
+        //"Setear" la distancia
         u.setDistancia();
-        u.setDinero();
-        u.setTiempo();
         
+        //"Setear" dinero
+        System.out.print("Ingrese el dinero: ");
+        u.setDinero(sc.nextInt());
         
-        //Mostrar datos
-        System.out.println("");
-        System.out.println("Nota: Pueden aparecer varios medios de transporte");
+        //"Setear" tiempo
+        System.out.print("Ingrese el tiempo: ");
+        u.setTiempo(sc.nextInt());
         
-        //Motivos esteticos
-        System.out.println("");
+        //Establecer trayectos (aleatorios)
+        u.setTrayectos(rn.nextInt(5) + 1);
+        
+        //Pasar datos de Usuario a Ruta
+        u.pasarDatos();
         
         //Mostrar ruta a seguir
-        System.out.println("Ruta a seguir:");
-        u.mostrarRuta();
+        u.mostrarResultados();
     }
     
 }
