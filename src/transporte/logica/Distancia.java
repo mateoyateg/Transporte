@@ -1,15 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* Copyright (C) 2017 Mateo Yate & Juan Ostos
+ * Universidad Distrital Francisco José de Caldas - 2017
+ * Programación Orientada a Objetos - Gr. 020-85
+ * Prohibida la reproducción total o parcial de este código
  */
+
 package transporte.logica;
 
 /**
  *
- * @author Mateo
+ * @author Mateo Yate & Juan Ostos
+ * @version 1.0 / 09.09.17
  */
+
 public class Distancia {
+    
     //Declarar variables
     private int x1;
     private int y1;
@@ -58,8 +62,16 @@ public class Distancia {
     
     //Mostrar distancia entre puntos
     public void mostrarDistancia(){
+        //Declarar variable
         float distancia;
+        
+        //Motivos esteticos
+        System.out.println("");
+        
+        //Calcular distancia
         distancia = (float) (Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2)));
+        
+        //Mostrar distancia
         System.out.println("La distancia entre los puntos es: " + distancia + " Unidades");
     }
     
@@ -70,6 +82,5 @@ public class Distancia {
         System.out.println("La direccion de llegada es: Calle " + x2 + " con Carrera " + y2);
         System.out.println("");
     }
-    
-    
+       
 }
