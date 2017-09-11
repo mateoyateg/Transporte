@@ -11,15 +11,16 @@ import java.util.Scanner;
 import transporte.logica.Usuario;
 
 /**
- * Descripcion
+ * Desde esta clase se ejecuta el programa
  * @author Mateo Yate, Juan Ostos
  * @version 1.0 / 09.09.17
+ * @see Usuario
  */
 
 public class Principal {
 
     /**
-     * Descripcion
+     * Metodo donde se piden los datos, se setean y se muestran resultados
      * @param args the command line arguments
      * 
      */

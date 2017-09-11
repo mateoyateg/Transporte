@@ -7,9 +7,10 @@
 package transporte.logica;
 
 /**
- *
+ * Simula el metodo de transporte "metro"
  * @author Mateo Yate, Juan Ostos
  * @version 1.0 / 09.09.17
+ * @see Ruta
  */
 
 public class Metro extends Transporte {

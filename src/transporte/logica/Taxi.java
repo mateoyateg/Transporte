@@ -7,9 +7,10 @@
 package transporte.logica;
 
 /**
- *
+ * Simula el metodo de transporte "taxi"
  * @author Mateo Yate, Juan Ostos
  * @version 1.0 / 09.09.17
+ * @see Ruta
  */
 
 public class Taxi extends Transporte {

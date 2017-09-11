@@ -7,9 +7,10 @@
 package transporte.logica;
 
 /**
- *
+ * Simula el medio de transporte "Uber"
  * @author Mateo Yate, Juan Ostos
  * @version 1.0 / 09.09.17
+ * @see Ruta
  */
 
 public class Uber extends Transporte {

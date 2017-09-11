@@ -7,9 +7,16 @@
 package transporte.logica;
 
 /**
- *
+ * Calcula la ruta a seguir en base a ciertas condiciones
  * @author Mateo Yate, Juan Ostos
  * @version 1.0 / 09.09.17
+ * @see Usuario
+ * @see Bicicleta
+ * @see Caminar
+ * @see Metro
+ * @see Taxi
+ * @see Uber
+ * @see Transmilenio
  */
 
 public class Ruta {
@@ -49,7 +56,7 @@ public class Ruta {
         return trayectos;
     }
   
-    
+    //Calcula la ruta a seguir en base a parametros establecidos
     public void mostrarRuta() {
         
         //Iniciar objetos de cada tipo de transporte

@@ -7,9 +7,15 @@
 package transporte.logica;
 
 /**
- *
+ * Hace de padre heredando los metodos a los diferentes medios de transporte
  * @author Mateo Yate, Juan Ostos
  * @version 1.0 / 09.09.17
+ * @see Bicicleta
+ * @see Caminar
+ * @see Metro
+ * @see Taxi
+ * @see Uber
+ * @see Transmilenio
  */
 
 public abstract class Transporte {

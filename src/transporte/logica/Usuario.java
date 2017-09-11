@@ -10,9 +10,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- *
+ * Simula los datos de un usuario y muestra la ruta generada en otra clase
  * @author Mateo Yate, Juan Ostos
  * @version 1.0 / 09.09.17
+ * @see Ruta
+ * @see Distancia
  */
 
 public class Usuario {
@@ -28,26 +30,32 @@ public class Usuario {
     private int tiempo;
     private int trayectos;
     
+    //Settear y Gettear el Dinero
     public int getDinero() {
         return dinero;
     }
-
+    
+    //Settear y Gettear el Dinero
     public void setDinero(int dinero) {
         this.dinero = dinero;
     }
     
+    //Settear y Gettear el Tiempo
     public int getTiempo() {
         return tiempo;
     }
     
+    //Settear y Gettear el Tiempo
     public void setTiempo(int tiempo) {
         this.tiempo = tiempo;
     }
     
+    //Settear y Gettear lso Trayectos
     public int getTrayectos() {
         return trayectos;
     }
     
+    //Settear y Gettear lso Trayectos
     public void setTrayectos(int trayectos) {
         this.trayectos = trayectos;
     }
